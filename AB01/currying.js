@@ -1,3 +1,5 @@
+const R = require("./ramda.min.js");
+/*
 const studentGrades = [ 
     {name: 'Joe', grade: 88},
     {name: 'Jen', grade: 94},
@@ -6,10 +8,28 @@ const studentGrades = [
     {name: 'Gina', grade: 54},
   ];
 
-const resultAnswer = (person) => {
+const resultAnswer = (student) => {
     function resultAnswerName(name) {
-        
+        return
+    }
+    return resultAnswerName;
+}
+console.log(studentGrades.map(resultAnswer()));
+*/
+
+const names = [ "Bernt", "Bob", "Albert"];
+
+const greeting = () => {
+    return (name) => {
+        return (grade) => {
+            if (grade >= 90) {
+                return`Good job ${name}, you've got an A`
+            }
+            if (grade >= 80) {
+                return `Good job ${name}, you've got a `
+            }
+        }
     }
 }
 
-studentGrades.map(resultAnswer)
+names.map((name) => greeting());
